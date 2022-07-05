@@ -108,6 +108,7 @@ class EntriController {
                 this.caches[key2.concat("rows")] = this.caches[key2].map((doc, i) => [
                     //
                     // i,
+                    // Helper.moment(doc.tanggal).format('MMM YYYY'),
                     doc.tanggal,
                     (() => (dari_uang.rate / ke_uang.rate) * (doc.harga ?? 0))(),
                     doc.id ? null : `stroke-color:#999999;fill-color:transparent;`,
