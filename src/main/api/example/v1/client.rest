@@ -1,0 +1,36 @@
+### Lihat daftar kelompok
+GET http://localhost/api/example/v1
+
+### Filter daftar kelompok sesuai nama kolom
+GET http://localhost/api/example/v1?id=3
+
+### Filter daftar kelompok menggunakan operator
+GET http://localhost/api/example/v1?nilai_perhitungan_gt=10
+
+### Cari daftar kelompok sesuai kata kunci
+GET http://localhost/api/example/v1?q=a
+
+### Lihat sebagaian daftar kelompok
+GET http://localhost/api/example/v1?_start=1&_end=2
+
+### Buat data kelompok baru
+POST http://localhost/api/example/v1
+Content-Type: application/json
+
+{
+    "nama":"nama1"
+}
+
+### Ubah data kelompok
+PATCH http://localhost/api/example/v1/20
+Content-Type: application/json
+
+{
+    "nama":"nama2"
+}
+
+### Hapus data kelompok
+DELETE http://localhost/api/example/v1/20
+
+https://api.oilpriceapi.com/v1/prices?by_period[from]=1546300800&by_period[to]=1640995200
+Authorization: Token 5488242a5e18bee2c321ed3d39143510

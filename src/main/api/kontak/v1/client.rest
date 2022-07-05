@@ -1,0 +1,36 @@
+### Lihat daftar kontak
+GET http://localhost/api/kontak/v1
+
+### Filter daftar kontak sesuai nama kolom
+GET http://localhost/api/kontak/v1?id=3
+
+### Filter daftar kontak menggunakan operator
+GET http://localhost/api/kontak/v1?nilai_perhitungan_gt=10
+
+### Cari daftar kontak sesuai kata kunci
+GET http://localhost/api/kontak/v1?q=a
+
+### Lihat sebagaian daftar kontak
+GET http://localhost/api/kontak/v1?_start=1&_end=2
+
+### Buat data kontak baru
+POST http://localhost/api/kontak/v1
+Content-Type: application/json
+
+{
+    "nama":"nama1"
+}
+
+### Ubah data kontak
+PATCH http://localhost/api/kontak/v1/20
+Content-Type: application/json
+
+{
+    "nama":"nama2"
+}
+
+### Hapus data kontak
+DELETE http://localhost/api/kontak/v1/20
+
+https://api.oilpriceapi.com/v1/prices?by_period[from]=1546300800&by_period[to]=1640995200
+Authorization: Token 5488242a5e18bee2c321ed3d39143510

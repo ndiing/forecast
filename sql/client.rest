@@ -1,0 +1,7 @@
+# https://www.oilpriceapi.com/dashboard
+# ajahujan@gmail.com
+# Wijaya12!!
+
+###
+GET https://api.oilpriceapi.com/v1/prices/latest
+Authorization: Token 5488242a5e18bee2c321ed3d39143510

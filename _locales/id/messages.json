@@ -1,0 +1,482 @@
+{
+    "invalid_request": {
+        "message": "Permintaan tidak ada parameter yang diperlukan, termasuk parameter atau nilai parameter yang tidak didukung, mengulangi parameter yang sama, menggunakan lebih dari satu metode untuk memasukkan token akses, atau sebaliknya cacat.",
+        "description": "The resource server SHOULD respond with the HTTP 400 (Bad Request) status code."
+    },
+    "invalid_token": {
+        "message": "Token akses yang disediakan sudah kedaluwarsa, dicabut, cacat, atau tidak valid karena alasan lain.",
+        "description": "The resource SHOULD respond with the HTTP 401 (Unauthorized) status code.  The client MAY request a new access token and retry the protected resource request."
+    },
+    "insufficient_scope": {
+        "message": "Permintaan membutuhkan hak istimewa yang lebih tinggi daripada yang disediakan oleh token akses.",
+        "description": "The resource server SHOULD respond with the HTTP 403 (Forbidden) status code and MAY include the \"scope\" attribute with the scope necessary to access the protected resource."
+    },
+    "postKelompok1": {
+        "message": "Data berhasil disimpan."
+    },
+    "postKelompok0": {
+        "message": "Kesalahan entri data."
+    },
+    "patchKelompok1": {
+        "message": "Data berhasil diubah."
+    },
+    "patchKelompok0": {
+        "message": "Data tidak ditemukan atau sudah dihapus."
+    },
+    "deleteKelompok1": {
+        "message": "Data berhasil dihapus."
+    },
+    "deleteKelompok0": {
+        "message": "Data tidak ditemukan atau sudah dihapus."
+    },
+    "postPengaturan1": {
+        "message": "Data berhasil disimpan."
+    },
+    "postPengaturan0": {
+        "message": "Kesalahan entri data."
+    },
+    "patchPengaturan1": {
+        "message": "Data berhasil diubah."
+    },
+    "patchPengaturan0": {
+        "message": "Data tidak ditemukan atau sudah dihapus."
+    },
+    "deletePengaturan1": {
+        "message": "Data berhasil dihapus."
+    },
+    "deletePengaturan0": {
+        "message": "Data tidak ditemukan atau sudah dihapus."
+    },
+    "postData1": {
+        "message": "Data berhasil disimpan."
+    },
+    "postData0": {
+        "message": "Kesalahan entri data."
+    },
+    "patchData1": {
+        "message": "Data berhasil diubah."
+    },
+    "patchData0": {
+        "message": "Data tidak ditemukan atau sudah dihapus."
+    },
+    "deleteData1": {
+        "message": "Data berhasil dihapus."
+    },
+    "deleteData0": {
+        "message": "Data tidak ditemukan atau sudah dihapus."
+    },
+    "postKontak1": {
+        "message": "Data berhasil disimpan."
+    },
+    "postKontak0": {
+        "message": "Kesalahan entri data."
+    },
+    "patchKontak1": {
+        "message": "Data berhasil diubah."
+    },
+    "patchKontak0": {
+        "message": "Data tidak ditemukan atau sudah dihapus."
+    },
+    "deleteKontak1": {
+        "message": "Data berhasil dihapus."
+    },
+    "deleteKontak0": {
+        "message": "Data tidak ditemukan atau sudah dihapus."
+    },
+    "postAlamat1": {
+        "message": "Data berhasil disimpan."
+    },
+    "postAlamat0": {
+        "message": "Kesalahan entri data."
+    },
+    "patchAlamat1": {
+        "message": "Data berhasil diubah."
+    },
+    "patchAlamat0": {
+        "message": "Data tidak ditemukan atau sudah dihapus."
+    },
+    "deleteAlamat1": {
+        "message": "Data berhasil dihapus."
+    },
+    "deleteAlamat0": {
+        "message": "Data tidak ditemukan atau sudah dihapus."
+    },
+    "postNomor1": {
+        "message": "Data berhasil disimpan."
+    },
+    "postNomor0": {
+        "message": "Kesalahan entri data."
+    },
+    "patchNomor1": {
+        "message": "Data berhasil diubah."
+    },
+    "patchNomor0": {
+        "message": "Data tidak ditemukan atau sudah dihapus."
+    },
+    "deleteNomor1": {
+        "message": "Data berhasil dihapus."
+    },
+    "deleteNomor0": {
+        "message": "Data tidak ditemukan atau sudah dihapus."
+    },
+    "postBank1": {
+        "message": "Data berhasil disimpan."
+    },
+    "postBank0": {
+        "message": "Kesalahan entri data."
+    },
+    "patchBank1": {
+        "message": "Data berhasil diubah."
+    },
+    "patchBank0": {
+        "message": "Data tidak ditemukan atau sudah dihapus."
+    },
+    "deleteBank1": {
+        "message": "Data berhasil dihapus."
+    },
+    "deleteBank0": {
+        "message": "Data tidak ditemukan atau sudah dihapus."
+    },
+    "postKategori1": {
+        "message": "Data berhasil disimpan."
+    },
+    "postKategori0": {
+        "message": "Kesalahan entri data."
+    },
+    "patchKategori1": {
+        "message": "Data berhasil diubah."
+    },
+    "patchKategori0": {
+        "message": "Data tidak ditemukan atau sudah dihapus."
+    },
+    "deleteKategori1": {
+        "message": "Data berhasil dihapus."
+    },
+    "deleteKategori0": {
+        "message": "Data tidak ditemukan atau sudah dihapus."
+    },
+    "postSatuan1": {
+        "message": "Data berhasil disimpan."
+    },
+    "postSatuan0": {
+        "message": "Kesalahan entri data."
+    },
+    "patchSatuan1": {
+        "message": "Data berhasil diubah."
+    },
+    "patchSatuan0": {
+        "message": "Data tidak ditemukan atau sudah dihapus."
+    },
+    "deleteSatuan1": {
+        "message": "Data berhasil dihapus."
+    },
+    "deleteSatuan0": {
+        "message": "Data tidak ditemukan atau sudah dihapus."
+    },
+    "postPajak1": {
+        "message": "Data berhasil disimpan."
+    },
+    "postPajak0": {
+        "message": "Kesalahan entri data."
+    },
+    "patchPajak1": {
+        "message": "Data berhasil diubah."
+    },
+    "patchPajak0": {
+        "message": "Data tidak ditemukan atau sudah dihapus."
+    },
+    "deletePajak1": {
+        "message": "Data berhasil dihapus."
+    },
+    "deletePajak0": {
+        "message": "Data tidak ditemukan atau sudah dihapus."
+    },
+    "postProduk1": {
+        "message": "Data berhasil disimpan."
+    },
+    "postProduk0": {
+        "message": "Kesalahan entri data."
+    },
+    "patchProduk1": {
+        "message": "Data berhasil diubah."
+    },
+    "patchProduk0": {
+        "message": "Data tidak ditemukan atau sudah dihapus."
+    },
+    "deleteProduk1": {
+        "message": "Data berhasil dihapus."
+    },
+    "deleteProduk0": {
+        "message": "Data tidak ditemukan atau sudah dihapus."
+    },
+    "postHarga1": {
+        "message": "Data berhasil disimpan."
+    },
+    "postHarga0": {
+        "message": "Kesalahan entri data."
+    },
+    "patchHarga1": {
+        "message": "Data berhasil diubah."
+    },
+    "patchHarga0": {
+        "message": "Data tidak ditemukan atau sudah dihapus."
+    },
+    "deleteHarga1": {
+        "message": "Data berhasil dihapus."
+    },
+    "deleteHarga0": {
+        "message": "Data tidak ditemukan atau sudah dihapus."
+    },
+    "postDiskon1": {
+        "message": "Data berhasil disimpan."
+    },
+    "postDiskon0": {
+        "message": "Kesalahan entri data."
+    },
+    "patchDiskon1": {
+        "message": "Data berhasil diubah."
+    },
+    "patchDiskon0": {
+        "message": "Data tidak ditemukan atau sudah dihapus."
+    },
+    "deleteDiskon1": {
+        "message": "Data berhasil dihapus."
+    },
+    "deleteDiskon0": {
+        "message": "Data tidak ditemukan atau sudah dihapus."
+    },
+    "postKomisi1": {
+        "message": "Data berhasil disimpan."
+    },
+    "postKomisi0": {
+        "message": "Kesalahan entri data."
+    },
+    "patchKomisi1": {
+        "message": "Data berhasil diubah."
+    },
+    "patchKomisi0": {
+        "message": "Data tidak ditemukan atau sudah dihapus."
+    },
+    "deleteKomisi1": {
+        "message": "Data berhasil dihapus."
+    },
+    "deleteKomisi0": {
+        "message": "Data tidak ditemukan atau sudah dihapus."
+    },
+    "postAkun1": {
+        "message": "Data berhasil disimpan."
+    },
+    "postAkun0": {
+        "message": "Kesalahan entri data."
+    },
+    "patchAkun1": {
+        "message": "Data berhasil diubah."
+    },
+    "patchAkun0": {
+        "message": "Data tidak ditemukan atau sudah dihapus."
+    },
+    "deleteAkun1": {
+        "message": "Data berhasil dihapus."
+    },
+    "deleteAkun0": {
+        "message": "Data tidak ditemukan atau sudah dihapus."
+    },
+    "postTransaksi1": {
+        "message": "Data berhasil disimpan."
+    },
+    "postTransaksi0": {
+        "message": "Kesalahan entri data."
+    },
+    "patchTransaksi1": {
+        "message": "Data berhasil diubah."
+    },
+    "patchTransaksi0": {
+        "message": "Data tidak ditemukan atau sudah dihapus."
+    },
+    "deleteTransaksi1": {
+        "message": "Data berhasil dihapus."
+    },
+    "deleteTransaksi0": {
+        "message": "Data tidak ditemukan atau sudah dihapus."
+    },
+    "postEntri1": {
+        "message": "Data berhasil disimpan."
+    },
+    "postEntri0": {
+        "message": "Kesalahan entri data."
+    },
+    "patchEntri1": {
+        "message": "Data berhasil diubah."
+    },
+    "patchEntri0": {
+        "message": "Data tidak ditemukan atau sudah dihapus."
+    },
+    "deleteEntri1": {
+        "message": "Data berhasil dihapus."
+    },
+    "deleteEntri0": {
+        "message": "Data tidak ditemukan atau sudah dihapus."
+    },
+    "postSeri1": {
+        "message": "Data berhasil disimpan."
+    },
+    "postSeri0": {
+        "message": "Kesalahan entri data."
+    },
+    "patchSeri1": {
+        "message": "Data berhasil diubah."
+    },
+    "patchSeri0": {
+        "message": "Data tidak ditemukan atau sudah dihapus."
+    },
+    "deleteSeri1": {
+        "message": "Data berhasil dihapus."
+    },
+    "deleteSeri0": {
+        "message": "Data tidak ditemukan atau sudah dihapus."
+    },
+    "postService1": {
+        "message": "Data berhasil disimpan."
+    },
+    "postService0": {
+        "message": "Kesalahan entri data."
+    },
+    "patchService1": {
+        "message": "Data berhasil diubah."
+    },
+    "patchService0": {
+        "message": "Data tidak ditemukan atau sudah dihapus."
+    },
+    "deleteService1": {
+        "message": "Data berhasil dihapus."
+    },
+    "deleteService0": {
+        "message": "Data tidak ditemukan atau sudah dihapus."
+    },
+    "postModule1": {
+        "message": "Data berhasil disimpan."
+    },
+    "postModule0": {
+        "message": "Kesalahan entri data."
+    },
+    "patchModule1": {
+        "message": "Data berhasil diubah."
+    },
+    "patchModule0": {
+        "message": "Data tidak ditemukan atau sudah dihapus."
+    },
+    "deleteModule1": {
+        "message": "Data berhasil dihapus."
+    },
+    "deleteModule0": {
+        "message": "Data tidak ditemukan atau sudah dihapus."
+    },
+    "postInput1": {
+        "message": "Data berhasil disimpan."
+    },
+    "postInput0": {
+        "message": "Kesalahan entri data."
+    },
+    "patchInput1": {
+        "message": "Data berhasil diubah."
+    },
+    "patchInput0": {
+        "message": "Data tidak ditemukan atau sudah dihapus."
+    },
+    "deleteInput1": {
+        "message": "Data berhasil dihapus."
+    },
+    "deleteInput0": {
+        "message": "Data tidak ditemukan atau sudah dihapus."
+    },
+    "postOutput1": {
+        "message": "Data berhasil disimpan."
+    },
+    "postOutput0": {
+        "message": "Kesalahan entri data."
+    },
+    "patchOutput1": {
+        "message": "Data berhasil diubah."
+    },
+    "patchOutput0": {
+        "message": "Data tidak ditemukan atau sudah dihapus."
+    },
+    "deleteOutput1": {
+        "message": "Data berhasil dihapus."
+    },
+    "deleteOutput0": {
+        "message": "Data tidak ditemukan atau sudah dihapus."
+    },
+    "postRequest1": {
+        "message": "Data berhasil disimpan."
+    },
+    "postRequest0": {
+        "message": "Kesalahan entri data."
+    },
+    "patchRequest1": {
+        "message": "Data berhasil diubah."
+    },
+    "patchRequest0": {
+        "message": "Data tidak ditemukan atau sudah dihapus."
+    },
+    "deleteRequest1": {
+        "message": "Data berhasil dihapus."
+    },
+    "deleteRequest0": {
+        "message": "Data tidak ditemukan atau sudah dihapus."
+    },
+    "postResponse1": {
+        "message": "Data berhasil disimpan."
+    },
+    "postResponse0": {
+        "message": "Kesalahan entri data."
+    },
+    "patchResponse1": {
+        "message": "Data berhasil diubah."
+    },
+    "patchResponse0": {
+        "message": "Data tidak ditemukan atau sudah dihapus."
+    },
+    "deleteResponse1": {
+        "message": "Data berhasil dihapus."
+    },
+    "deleteResponse0": {
+        "message": "Data tidak ditemukan atau sudah dihapus."
+    },
+    "postInbox1": {
+        "message": "Data berhasil disimpan."
+    },
+    "postInbox0": {
+        "message": "Kesalahan entri data."
+    },
+    "patchInbox1": {
+        "message": "Data berhasil diubah."
+    },
+    "patchInbox0": {
+        "message": "Data tidak ditemukan atau sudah dihapus."
+    },
+    "deleteInbox1": {
+        "message": "Data berhasil dihapus."
+    },
+    "deleteInbox0": {
+        "message": "Data tidak ditemukan atau sudah dihapus."
+    },
+    "postOutbox1": {
+        "message": "Data berhasil disimpan."
+    },
+    "postOutbox0": {
+        "message": "Kesalahan entri data."
+    },
+    "patchOutbox1": {
+        "message": "Data berhasil diubah."
+    },
+    "patchOutbox0": {
+        "message": "Data tidak ditemukan atau sudah dihapus."
+    },
+    "deleteOutbox1": {
+        "message": "Data berhasil dihapus."
+    },
+    "deleteOutbox0": {
+        "message": "Data tidak ditemukan atau sudah dihapus."
+    }
+}

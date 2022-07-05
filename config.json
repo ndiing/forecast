@@ -1,0 +1,28 @@
+{
+    "server": {
+        "httpPort": 80,
+        "httpsPort": 443,
+        "proxyPort": 8888,
+        "aesKey": "00000000000000000000000000000000",
+        "aesIv": "0000000000000000",
+        "jweKey": "11111111111111111111111111111111",
+        "jweIv": "1111111111111111",
+        "jweSecret": "22222222222222222222222222222222"
+    },
+    "sql": {
+        "user": "",
+        "password": "",
+        "database": "",
+        "server": "localhost",
+        "pool": {
+            "max": 32767,
+            "min": 0,
+            "idleTimeoutMillis": 30000
+        },
+        "options": {
+            "encrypt": false,
+            "trustServerCertificate": true,
+            "trustedConnection": true
+        }
+    }
+}
