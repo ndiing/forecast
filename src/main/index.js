@@ -13,7 +13,7 @@ const { JWE } = require("../common/crypto");
 const I18n = require("../common/i18n");
 // require('../common/model')
 // require('../common/proxy')
-require('../common/fuzzy')
+require("../common/fuzzy");
 
 class Server {
     static init() {
@@ -21,14 +21,21 @@ class Server {
         process.on("unhandledRejection", Server.nothing());
         const app = express();
         app.use(Server.parse());
-        app.use(helmet());
         app.use(cors());
+        app.use(helmet({ contentSecurityPolicy: false }));
         // app.use(Server.accessControl());
         // app.use("/api/example/v1/", require("./api/example/v1/index"));
         app.use("/api/uang/v1/", require("./api/uang/v1/index"));
         app.use("/api/kontak/v1/", require("./api/kontak/v1/index"));
         app.use("/api/entri/v1/", require("./api/entri/v1/index"));
         app.use("/api/ramalan/v1/", require("./api/ramalan/v1/index"));
+        app.get("/data.js", (req, res) => {
+            res.type("js");
+            let code = "";
+            code = `window.baseUrl="http://${req.hostname}"\n`;
+            res.send(code);
+        });
+        app.use(express.static("./static"));
         app.use(Server.notFound());
         app.use(Server.error());
         http.createServer(app).listen(global.server.httpPort, "0.0.0.0");
@@ -130,4 +137,3 @@ class Server {
 // Server.init();
 
 module.exports = Server;
-
