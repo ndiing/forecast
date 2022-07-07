@@ -22,7 +22,7 @@ class Server {
         const app = express();
         app.use(Server.parse());
         app.use(cors());
-        app.use(helmet({ contentSecurityPolicy: false }));
+        // app.use(helmet());
         // app.use(Server.accessControl());
         // app.use("/api/example/v1/", require("./api/example/v1/index"));
         app.use("/api/uang/v1/", require("./api/uang/v1/index"));
