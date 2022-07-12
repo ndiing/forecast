@@ -10,8 +10,8 @@ class Fuzzy {
      */
     static timeSeries(data = [], options = {}) {
         var { d1, d2 } = options;
-        var harga = data.map((doc) => doc.harga);// map harga
-        var length = harga.length;// jumlah data
+        var harga = data.map((doc) => doc.harga); // map harga
+        var length = harga.length; // jumlah data
         var min = Math.min(...harga); // nilai min dari list harga
         var max = Math.max(...harga); // nilai max dari list harga
         d1 = d1 ?? Math.floor(min / 1) * 1 - min; // adjust/rounded harga terendah
@@ -24,19 +24,6 @@ class Fuzzy {
         // jumlah pembagian klasifikasi himpunan
         var panjang_kelas = Math.round((max1 - min1) / jumlah_kelas);
 
-        // console.table({
-        //     d1,
-        //     d2,
-        //     // harga,
-        //     length,
-        //     min,
-        //     max,
-        //     min1,
-        //     max1,
-        //     jumlah_kelas,
-        //     panjang_kelas,
-        // });
-
         // map `HSP` himpunan semesta pembicaraan
         var hsp = [];
         for (let i = 0; i < jumlah_kelas; i++) {
@@ -48,7 +35,6 @@ class Fuzzy {
             curr.median = (curr.bb + curr.ba) / 2; // nilai tengah
             hsp.push(curr);
         }
-        // console.table(hsp);
 
         // fuzifikasi
         var fuzzy = [];
@@ -58,12 +44,7 @@ class Fuzzy {
             // penentuan kelas
             for (var curr2 of hsp) {
                 curr.kelas = curr2.kelas;
-                if (
-                    //
-                    // curr.harga>=curr2.bb&&
-                    // curr.harga<=curr2.ba
-                    curr2.ba >= curr.harga
-                ) {
+                if (curr2.ba >= curr.harga) {
                     curr.kelas = curr2.kelas;
                     break;
                 }
@@ -78,7 +59,6 @@ class Fuzzy {
             curr.flrg = prev && `G${prev?.kelas}`; // map excel
             fuzzy.push(curr);
         }
-        // console.table(fuzzy, ["tanggal", "harga", "kelas"]);
 
         // `FLRG`
         // fuzzy logic relation group
@@ -119,15 +99,15 @@ class Fuzzy {
             // add chen
             curr.chen = flrg[curr.flrg].chen;
             // curr.chen = parseFloat(curr.chen.toFixed(2));
-            
+
             // add cheng
             curr.cheng = flrg[curr.flrg].cheng;
             // curr.cheng = parseFloat(curr.cheng.toFixed(2));
-            
+
             // epsilon/persentase error metode chen
             curr.pe_chen = (Math.abs(curr.harga - curr.chen) / curr.harga) * 100;
             // curr.pe_chen = parseFloat(curr.pe_chen.toFixed(2));
-            
+
             // epsilon/persentase error metode cheng
             curr.pe_cheng = (Math.abs(curr.harga - curr.cheng) / curr.harga) * 100;
             // curr.pe_cheng = parseFloat(curr.pe_cheng.toFixed(2));
@@ -145,7 +125,7 @@ class Fuzzy {
             min1, // data pendukung dari inputan
             max1, // data pendukung dari inputan
             jumlah_kelas, // data pendukung dari inputan
-            panjang_kelas,  // data pendukung dari inputan
+            panjang_kelas, // data pendukung dari inputan
             hsp, // data hasil himpunan semesta pembicarran
             fuzzy, // data hasil data fuzifikasi
             flrg, // data flrg
