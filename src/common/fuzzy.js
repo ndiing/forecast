@@ -85,10 +85,13 @@ class Fuzzy {
         var flrg = {};
         for (var curr of fuzzy) {
             if (!curr.flrg) continue;
+            // klasifikasi
             if (!flrg[curr.flrg]) flrg[curr.flrg] = {};
+            // batas kiri
             if (!flrg[curr.flrg].lh) flrg[curr.flrg].lh = {};
             if (!flrg[curr.flrg].lh[curr.lh]) flrg[curr.flrg].lh[curr.lh] = 0;
             ++flrg[curr.flrg].lh[curr.lh];
+            // batas kanan
             if (!flrg[curr.flrg].rh) flrg[curr.flrg].rh = {};
             if (!flrg[curr.flrg].rh[curr.rh]) flrg[curr.flrg].rh[curr.rh] = 0;
             ++flrg[curr.flrg].rh[curr.rh];
