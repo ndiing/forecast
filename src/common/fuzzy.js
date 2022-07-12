@@ -3,9 +3,9 @@
  */
 class Fuzzy {
     /**
-     * @param {Array} data -
-     * @param {Number} d1 -
-     * @param {Number} d2 -
+     * @param {Array} data - data periode sebelumnya
+     * @param {Number} d1 - adjust nilai min
+     * @param {Number} d2 - adjust nilai max
      * @returns Object
      */
     static timeSeries(data = [], options = {}) {
