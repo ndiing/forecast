@@ -98,19 +98,15 @@ class Fuzzy {
             if (!curr.flrg) continue;
             // add chen
             curr.chen = flrg[curr.flrg].chen;
-            // curr.chen = parseFloat(curr.chen.toFixed(2));
 
             // add cheng
             curr.cheng = flrg[curr.flrg].cheng;
-            // curr.cheng = parseFloat(curr.cheng.toFixed(2));
 
             // epsilon/persentase error metode chen
             curr.pe_chen = (Math.abs(curr.harga - curr.chen) / curr.harga) * 100;
-            // curr.pe_chen = parseFloat(curr.pe_chen.toFixed(2));
 
             // epsilon/persentase error metode cheng
             curr.pe_cheng = (Math.abs(curr.harga - curr.cheng) / curr.harga) * 100;
-            // curr.pe_cheng = parseFloat(curr.pe_cheng.toFixed(2));
 
             doc = curr;
         }
